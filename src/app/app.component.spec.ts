@@ -39,15 +39,48 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
     
-    app.val2=4;
-    app.val1=9;
-    app.seleccionada='sumar'
+    app.val1=4;
+    app.val2=9;
+    app.seleccionada='1'
     app.operacion();
     const expectTotal=13;
     expect(app.total).toEqual(expectTotal);
-
-
-
   });
+
+   it('should restar two number',()=>{
+     const fixture = TestBed.createComponent(AppComponent);
+     const app = fixture.componentInstance;
+    
+    app.val1=9;
+    app.val2=8;
+     app.seleccionada='2'
+     app.operacion();
+     const expectTotal=1;
+     expect(app.total).toEqual(expectTotal);
+   });
+
+   it('should multiplicar two number',()=>{
+     const fixture = TestBed.createComponent(AppComponent);
+     const app = fixture.componentInstance;
+    
+    app.val1=5;
+    app.val2=3;
+    app.seleccionada='3'
+    app.operacion();
+     const expectTotal=15;
+    expect(app.total).toEqual(expectTotal);
+   });
+
+  it('should dividir two number',()=>{
+   const fixture = TestBed.createComponent(AppComponent);
+   const app = fixture.componentInstance;
+    
+     app.val1=8;
+     app.val2=2;
+     app.seleccionada='4'
+     app.operacion();
+     const expectTotal=4;
+     expect(app.total).toEqual(expectTotal);
+   });
 
 });
