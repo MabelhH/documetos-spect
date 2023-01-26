@@ -3,3 +3,16 @@ background-color: rgb(0, 89, 255);
 color: rgb(0, 0, 0);
 font-size: 18px;
 }
+.container{
+background-color: plum;
+border-radius: 6px;
+padding: 20px;
+margin-top: 100px;
+}
+
+p{
+font-size: 25px;
+}
+input{
+    font-size: 20px;
+}
